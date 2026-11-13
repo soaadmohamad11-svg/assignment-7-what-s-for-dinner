@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>what's for dinner</title>
+    <!-- bootstrap css -->
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- font awesome -->
+     <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+</head>
+<body>
+    <!-- navbar -->
+    <header class="header bg-body py-3 px-4">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <!-- logo -->
+                <div class="logo d-flex align-items-center col-auto gap-3">
+                    <div class="icon p-3 d-flex align-items-center justify-content-center"><i class="fa-solid fa-utensils"></i></div>
+                    <div class="text">
+                        <h1>What's For Dinner</h1>
+                        <p>Your daily meal inspiration</p>
+                    </div>
+                </div>
+                <!-- avatar & btns -->
+                <div class="btns d-flex align-items-center justify-content-center col-auto gap-3">
+                    <button><i class="fa-solid fa-bookmark"></i></button>
+                    <button><i class="fa-solid fa-gear"></i></button>
+                    <button><i class="fa-solid fa-clock-rotate-left"></i></button>
+                    <button class="img">
+                        <img src="./imgs/avatar-2.jpg" alt="Avatar">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Start hero section -->
+    <section id="hero-section">
+        <div class="container main rounded-4 overflow-hidden p-0">
+            <div class="row recipe">
+                <!--  Start Image Section -->
+                <div class="col-12 col-lg-5 px-0">
+                    <div class="recipe-image overflow-hidden ">
+                        <img src="./imgs/Classic-Beef-Burger.jpg" alt="" id="meal-image">
+                        <!-- Rating -->
+                        <div class="rating bg-body rounded-5 py-2 px-3">
+                            <i class="fa-solid fa-star text-warning"></i>
+                            <span id="rating" class="text-black fw-bold">4.6</span>
+                            <span id="reviews" class="text-muted">(421 reviews)</span>
+                        </div>
+                        <!-- Recipe Info -->
+                        <div class="recipe-info bg-body rounded-4 p-4 d-flex align-items-center justify-content-between">
+                            <!-- Prep Time -->
+                            <div class="prep-time d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-clock"></i>
+                                <p>Prep Time</p>
+                                <p id="prep-min">15 min</p>
+                            </div>
+                            <!-- Cook Time -->
+                            <div class=" d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-fire-burner text-danger"></i>
+                                <p>Cook Time</p>
+                                <p id="cook-min">20 min</p>
+                            </div>
+                            <!-- Servings -->
+                            <div class=" d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-users text-primary"></i>
+                                <p class="text-muted">Servings</p>
+                                <p id="serving" class="text-black fw-bold">4 people</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  End Image Section -->
+                <!-- >>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<< -->
+                <!-- Start Details Section -->
+                <div class="col-12 col-lg-7 p-5 bg-body">
+                    <div class="recipe-details bg-body  ">
+                    <!-- Meal Category -->
+                    <div class="top-text">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="meal-name">
+                                <div class="d-flex align-items-center gap-3 mb-2">
+                                    <span id="level" class="color1 text-success fw-medium px-3 py-1 rounded-4">Easy</span>
+                                    <span id="cuisine" class="color2 text-primary fw-bold px-3 py-1 rounded-4">American</span>
+                                </div>
+                                <!-- Meal Name -->
+                                <h3 id="meal-name" class="fw-bold mb-2">Classic Beef Burger</h3>
+                                <!-- Meal Description -->
+                                <p id="description">Juicy homemade burger with all the fixings</p>
+                            </div>
+                            <!-- buttons -->
+                            <div class="btns d-flex gap-2">
+                                <button class="py-3 px-4 rounded-4"><i class="fa-solid fa-bookmark"></i></button>
+                                <button class="py-3 px-4 rounded-4"><i class="fa-solid fa-share-nodes"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- alert message -->
+                    <div id="preparation-alert"></div>
+                    <!-- start nav&tabs -->
+                        <!-- start tabs -->
+                    <div id="tabs" >
+                        <ul class="nav nav-underline d-flex flex-nowrap justify-content-evenly px-4" role="tablist">
+                            <li class="nav-item">
+                                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#ingredients-content" type="button">
+                                    <i class="fa-solid fa-list-check"></i>
+                                    Ingredients
+                                </button>
+                            </li>
+                            <li class="nav-item" >
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#instructions-content" type="button">
+                                    <i class="fa-solid fa-book-open"></i>
+                                    Instructions
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nutrition-content" type="button">
+                                    <i class="fa-solid fa-chart-pie"></i>
+                                    Nutrition
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tips-content" type="button">
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                    Chef's Tips
+                                </button>
+                            </li>
+                        </ul> 
+                        <!-- tabs content -->
+                        <div class="tab-content py-3">
+                            <!-- ingredients tap -->
+                            <div class="tab-pane fade show active" id="ingredients-content">
+                                <div class="ingredients p-3 rounded-4">
+                                    <ul id="ingredients" class="w-100 d-flex flex-column gap-2">
+                                        <li class="d-flex align-items-center gap-3">
+                                            <div class="number d-flex justify-content-center rounded-5 fw-medium text-light">1</div>
+                                            <span class="text-muted">500g ground beef (80/20)</span>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-3">
+                                            <div class="number d-flex justify-content-center rounded-5 fw-medium text-light">2</div>
+                                            <span class="text-muted">4 burger buns</span>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-3">
+                                            <div class="number d-flex justify-content-center rounded-5 fw-medium text-light">3</div>
+                                            <span class="text-muted">4 slices cheddar cheese</span>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-3">
+                                            <div class="number d-flex justify-content-center rounded-5 fw-medium text-light">4</div>
+                                            <span class="text-muted">Lettuce leaves</span>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-3">
+                                            <div class="number d-flex justify-content-center rounded-5 fw-medium text-light">5</div>
+                                            <span class="text-muted">Tomato slices</span>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-3">
+                                            <div class="number d-flex justify-content-center rounded-5 fw-medium text-light">6</div>
+                                            <span class="text-muted">Red onion, sliced</span>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-3">
+                                            <div class="number d-flex justify-content-center rounded-5 fw-medium text-light">7</div>
+                                            <span class="text-muted">Pickles</span>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-3">
+                                            <div class="number d-flex justify-content-center rounded-5 fw-medium text-light">8</div>
+                                            <span class="text-muted">Burger sauce or condiments</span>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- instructions tap -->
+                            <div class="tab-pane fade" id="instructions-content">
+                                <div class="instructions py-3">
+                                    <ul id="instructions" class="w-100 d-flex flex-column gap-2">
+                                        <li class="d-flex align-items-center gap-3 mb-4 ">
+                                            <div class="number d-flex justify-content-center rounded-4 fw-bold text-light">1</div>
+                                            <span class="text-muted">Divide ground beef into 4 equal portions. Form into patties, making a small indent in the center.</span>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-3 mb-4">
+                                            <div class="number d-flex justify-content-center rounded-4 fw-bold text-light">2</div>
+                                            <span class="text-muted">Season patties generously with salt and pepper on both sides.</span>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-3 mb-4">
+                                            <div class="number d-flex justify-content-center rounded-4 fw-bold text-light">3</div>
+                                            <span class="text-muted">Heat a grill or skillet over high heat. Cook patties for 4-5 minutes per side for medium.</span>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-3 mb-4">
+                                            <div class="number d-flex justify-content-center rounded-4 fw-bold text-light">4</div>
+                                            <span class="text-muted">Add cheese slices in the last minute of cooking and cover to melt.</span>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-3 mb-4">
+                                            <div class="number d-flex justify-content-center rounded-4 fw-bold text-light">5</div>
+                                            <span class="text-muted">Toast burger buns lightly on the grill or in a pan.</span>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-3 mb-4">
+                                            <div class="number d-flex justify-content-center rounded-4 fw-bold text-light">6</div>
+                                            <span class="text-muted">Assemble burgers with lettuce, tomato, onion, pickles, and your favorite sauce.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- nutrition tap -->
+                            <div class="tab-pane fade" id="nutrition-content">
+                                <div class="nutrition row g-3 py-3">
+                                    <div class="col-12 col-md-6">
+                                        <div class="inner d-flex align-content-start w-100 p-3 rounded-4">
+                                        <div class="d-flex align-items-start gap-2 text-center">
+                                            <div class="icon1 py-2 px-3 rounded-3"><i class="fa-solid fa-fire"></i></div>
+                                            <span class="fw-medium text-black align-self-center ">Calories</span>
+                                        </div>
+                                        <span class="fw-bold text-black fs-5 ms-auto align-self-center" id="calories">650 kcal</span>
+                                    </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="inner d-flex align-content-start w-100 p-3 rounded-4">
+                                        <div class="d-flex align-items-start gap-2 text-center">
+                                            <div class="icon2 py-2 px-3 rounded-3"><i class="fa-solid fa-dumbbell"></i></div>
+                                            <span class="fw-medium text-black align-self-center ">Protein</span>
+                                        </div>
+                                        <span class="fw-bold text-black fs-5 ms-auto align-self-center" id="protein">38g</span>
+                                    </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="inner d-flex align-content-start w-100 p-3 rounded-4">
+                                        <div class="d-flex align-items-start gap-2 text-center">
+                                            <div class="icon3 py-2 px-3 rounded-3"><i class="fa-solid fa-wheat-awn"></i></div>
+                                            <span class="fw-medium text-black align-self-center ">Carbohydrates</span>
+                                        </div>
+                                        <span class="fw-bold text-black fs-5 ms-auto align-self-center" id="carbohydrates">42g</span>
+                                    </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="inner d-flex align-content-start w-100 p-3 rounded-4">
+                                        <div class="d-flex align-items-start gap-2 text-center">
+                                            <div class="icon4 py-2 px-3 rounded-3"><i class="fa-solid fa-droplet"></i></div>
+                                            <span class="fw-medium text-black align-self-center ">Fat</span>
+                                        </div>
+                                        <span class="fw-bold text-black fs-5 ms-auto align-self-center" id="fat">35g</span>
+                                    </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="inner d-flex align-content-start w-100 p-3 rounded-4">
+                                        <div class="d-flex align-items-start gap-2 text-center">
+                                            <div class="icon5 py-2 px-3 rounded-3"><i class="fa-solid fa-seedling"></i></div>
+                                            <span class="fw-medium text-black align-self-center ">Fiber</span>
+                                        </div>
+                                        <span class="fw-bold text-black fs-5 ms-auto align-self-center" id="fiber">2g</span>
+                                    </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="inner d-flex align-content-start w-100 p-3 rounded-4">
+                                        <div class="d-flex align-items-start gap-2 text-center">
+                                            <div class="icon6 py-2 px-3 rounded-3"><i class="fa-solid fa-cube"></i></div>
+                                            <span class="fw-medium text-black align-self-center ">Sodium</span>
+                                        </div>
+                                        <span class="fw-bold text-black fs-5 ms-auto align-self-center" id="sodium">920mg</span>
+                                    </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Chef's Tips -->
+                            <div class="tab-pane fade" id="tips-content">
+                                <div id="tips" class="tips py-3 d-flex flex-column gap-4">
+                                    <div class="line rounded-4 p-3 d-flex align-items-center justify-content-start gap-2">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Don't press down on burgers while cooking - keeps them juicy</p>
+                                    </div>
+                                    <div class="line rounded-4 p-3 d-flex align-items-center justify-content-start gap-2">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Make indent in center to prevent burger from puffing up</p>
+                                    </div>
+                                    <div class="line rounded-4 p-3 d-flex align-items-center justify-content-start gap-2">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Let patties rest for 2-3 minutes before serving</p>
+                                    </div>
+                                    <div class="line rounded-4 p-3 d-flex align-items-center justify-content-start gap-2">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Toast buns for better texture and flavor</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end tabs -->
+                    <!-- Try Another Recipe buttom -->
+                    <div class="btn mt-4 d-flex align-items-start border-top pt-4 ">
+                        <button id="recipe-btn" class="rounded-3 py-2 px-4">
+                        <i class="fa-solid fa-rotate"></i>
+                        Try Another Recipe
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <!-- end Details Section -->
+            </div>
+        </div>
+    </section>
+    <!-- End hero section -->
+
+    <!-- bootstrap js -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- js -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
+
